@@ -1,8 +1,5 @@
-require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-
-const port = process.env.PORT;
 
 const app = express();
 app.use(cors());
@@ -175,6 +172,6 @@ app.post("/post-quote", (req, res) => {
   res.json({ message: "Quote added successfully" });
 });
 
-app.listen(port, () => {
+app.listen(8000, () => {
   console.log(`Server running at port ${port}`)
 });
